@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+    <ItemGroup>
+	    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.14">
+		    <PrivateAssets>all</PrivateAssets>
+		    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	    </PackageReference>
+	    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Data\ALR.WebAPI.Base\ALR.WebAPI.Base.csproj" />
+    <ProjectReference Include="..\..\Data\ALR.WebAPI.Data\ALR.WebAPI.Database.csproj" />
+    <ProjectReference Include="..\..\Data\ALR.WebAPI.Dto\ALR.WebAPI.Dto.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\ALR.WebAPI.Infrastructure\ALR.WebAPI.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Services\ALR.WebAPI.Authentication.Services\ALR.WebAPI.Authentication.Services.csproj" />
+    <ProjectReference Include="..\..\Services\ALR.WebAPI.Common.Services\ALR.WebAPI.Common.Services.csproj" />
+    <ProjectReference Include="..\..\Services\ALR.WebAPI.Service\ALR.WebAPI.Service.csproj" />
+  </ItemGroup>
+<ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+</Project>

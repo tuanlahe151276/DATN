@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Data\ALR.WebAPI.Data\ALR.WebAPI.Database.csproj" />
+    <ProjectReference Include="..\..\Services\ALR.WebAPI.Authentication.Services\ALR.WebAPI.Authentication.Services.csproj" />
+    <ProjectReference Include="..\..\Services\ALR.WebAPI.Common.Services\ALR.WebAPI.Common.Services.csproj" />
+    <ProjectReference Include="..\..\Services\ALR.WebAPI.Service\ALR.WebAPI.Service.csproj" />
+  </ItemGroup>
+
+	<ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.14" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Configuration\" />
+	</ItemGroup>
+</Project>
