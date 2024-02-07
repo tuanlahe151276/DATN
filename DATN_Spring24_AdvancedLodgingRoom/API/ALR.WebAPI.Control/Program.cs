@@ -17,6 +17,7 @@ public class Program
         builder.Services.RegisterContextDB(builder.Configuration);
         builder.Services.RegiserDI();
         builder.Services.RegisterTokenBearer(builder.Configuration);
+        builder.Services.RegisterCors();
 
         var app = builder.Build();
 
@@ -30,7 +31,7 @@ public class Program
         app.UseHttpsRedirection();
 
         app.UseAuthorization();
-
+        app.UseCors("AllowReactApp");
 
         app.MapControllers();
 

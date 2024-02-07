@@ -11,9 +11,5 @@
     <ProjectReference Include="..\..\Data\ALR.WebAPI.Data\ALR.WebAPI.Database.csproj" />
     <ProjectReference Include="..\..\Data\ALR.WebAPI.Dto\ALR.WebAPI.Dto.csproj" />
   </ItemGroup>
-	<ItemGroup>
-		<Folder Include="Abstract\" />
-		<Folder Include="Implement\" />
-	</ItemGroup>
 </Project>
 	
