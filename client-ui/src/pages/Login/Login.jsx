@@ -18,6 +18,7 @@ export default function Login() {
     e.preventDefault();
     try {
       const res = await UserService.loginAPI(data);
+      console.log(res);
       // Hiển thị thông báo lỗi từ máy chủ
       if (res && res.status === "ERROR") {
         console.log("error", res.message);
@@ -83,7 +84,7 @@ export default function Login() {
           </div>
           <form onSubmit={(e) => e.preventDefault()} className="space-y-5">
             <div>
-              <label className="font-medium">UserName</label>
+              <label className="font-medium">account</label>
               <input
                 type="text"
                 onChange={(e) => setData({ ...data, account: e.target.value })}

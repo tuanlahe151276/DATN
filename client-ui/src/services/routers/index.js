@@ -1,8 +1,8 @@
-export const url = process.env.REACT_APP_API_URL;
+export const url = "https://localhost:7047";
 
 //USER
-export const loginURL = `${url}/Authentication/Login`;
-export const registerURL = `${url}/Authentication/register`;
+export const loginURL = `${url}/api/Authentication/Login`;
+export const registerURL = `${url}/api/Authentication/RegistrationAccount`;
 export const getDetailUserURL = `${url}/user/get-detail`;
 
 export const logoutURL = `${url}/user/log-out`;
