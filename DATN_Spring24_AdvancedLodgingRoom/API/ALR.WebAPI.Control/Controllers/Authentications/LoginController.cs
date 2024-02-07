@@ -44,8 +44,10 @@ namespace ALR.WebAPI.Control.Controllers.Authentications
                         CreationTime = DateTime.Now,
                         IsActive = true
                     });
-                    return Ok(new JwtDto
+                    return Ok(
+                        new JwtDto
                     {
+                            status = "OK",
                         AccessToken = accessToken,
                         RefreshToken = refreshToken,
                         Account = account.Account,

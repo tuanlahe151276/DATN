@@ -25,8 +25,23 @@ namespace ALR.WebAPI.Infrastructure.Configuration
             service.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             service.AddScoped(typeof(IAuthenticationService), typeof(AuthenticationService));
             service.AddScoped(typeof(ISaveUserToken), typeof(SaveUserToken));
+            service.AddScoped(typeof(IRegistrationAccountService), typeof(RegistrationAccountService));
 
 
+        }
+         
+        public static void RegisterCors(this IServiceCollection service)
+        {
+            service.AddCors(options =>
+            {
+                options.AddPolicy("AllowReactApp",
+                    builder =>
+                    {
+                        builder.WithOrigins("http://localhost:3000")
+                            .AllowAnyHeader()
+                            .AllowAnyMethod();
+                    });
+            });
         }
     }
 }

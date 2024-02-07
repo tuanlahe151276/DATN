@@ -23,7 +23,4 @@
     <ProjectReference Include="..\..\Services\ALR.WebAPI.Common.Services\ALR.WebAPI.Common.Services.csproj" />
     <ProjectReference Include="..\..\Services\ALR.WebAPI.Service\ALR.WebAPI.Service.csproj" />
   </ItemGroup>
-<ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
 </Project>
