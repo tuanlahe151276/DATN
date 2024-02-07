@@ -1,24 +1,30 @@
-import { Link } from "react-router-dom";
-import { Form, Input } from "antd";
+import { DatePicker, Form, Input, Radio } from "antd";
 import { FaFacebook } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router-dom";
-import { registerAPI } from "../../services/user.api";
-import Toast from "../../utils/Toast";
-import React, { useState } from "react";
+import { registerAPI } from "../../services/auth.api";
+import { useState } from "react";
+import {
+  getRegexPassword,
+  getRegexPhoneNumber,
+} from "../../utils/stringsUtils";
+import { isDateBeforeToday } from "../../utils/function";
+import dayjs from "dayjs";
+
 export default function SignUp() {
   const [form] = Form.useForm();
   const navigate = useNavigate();
-  const getRegexPassword = () => {
-    const regex =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*\(\)\-_=+?><\.\,;:'"])(?=.{8,})/;
-    return regex;
-  };
   const defaultValue = {
-    name: "",
-    email: "",
+    account: "",
     password: "",
     confirmPassword: "",
+    userName: "",
+    gender: 1,
+    dob: "",
+    email: "",
+    address: "",
+    phoneNumber: "",
+    role: 0,
   };
   const [formValue, setFormValue] = useState(defaultValue);
   const handleValuesChange = (changedValues, allValues) => {
@@ -27,12 +33,15 @@ export default function SignUp() {
   //-----Create
   const createUser = async () => {
     try {
-      const res = await registerAPI(formValue);
+      console.log({ ...formValue, dob: formValue.dob.format() });
+      const res = await registerAPI({
+        ...formValue,
+        dob: formValue.dob.format(),
+      });
       if (res && res.status === "ERROR") {
-        Toast("error", res.message);
+        alert("error", res.message);
       } else if (res.data) {
-        Toast("success", "Đăng ký thành công");
-        // dispatch(addToUserList(res.data));
+        alert("success", "Đăng ký thành công");
         form.resetFields();
         setFormValue(defaultValue);
         setTimeout(() => {
@@ -40,7 +49,7 @@ export default function SignUp() {
         }, 1500);
       }
     } catch (error) {
-      Toast("error", error);
+      alert("error", error);
     }
   };
   return (
@@ -53,7 +62,7 @@ export default function SignUp() {
               className="lg:hidden w-14 lg:w-[100px] h-auto"
               alt="Logo"
             />
-            <div className="mt-2 lg:mt-5 flex flex-col gap-y-2">
+            <div className="mt-1 lg:mt-5 flex flex-col gap-y-2">
               <h3 className="text-gray-800 text-2xl font-bold sm:text-3xl">
                 Đăng ký
               </h3>
@@ -84,7 +93,7 @@ export default function SignUp() {
               </span>
             </button>
           </div>
-          <div className="relative mt-2">
+          <div className="relative mt-1">
             <span className="block w-full h-px bg-gray-300"></span>
             <p className="inline-block w-fit text-sm bg-white px-2 absolute -top-2 inset-x-0 mx-auto">
               Hoặc tiếp tục với:
@@ -95,9 +104,9 @@ export default function SignUp() {
             onValuesChange={handleValuesChange}
             name="register"
             form={form}
-            className="w-full mt-4">
+            className="w-full mt-1">
             <Form.Item
-              name="name"
+              name="account"
               hasFeedback
               rules={[
                 {
@@ -110,26 +119,8 @@ export default function SignUp() {
                 fontSize: 18,
               }}>
               <Input
-                placeholder="Nhập họ và tên"
-                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
-              />
-            </Form.Item>
-            <Form.Item
-              name="email"
-              hasFeedback
-              rules={[
-                {
-                  required: true,
-                  message: "Vui lòng nhập thông tin!",
-                },
-                {
-                  type: "email",
-                  message: "Vui lòng nhập đúng định dạng E-mail!",
-                },
-              ]}>
-              <Input
-                placeholder="Nhập email"
-                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                placeholder="Your Account"
+                className="w-full mt-1 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
               />
             </Form.Item>
             <Form.Item
@@ -147,8 +138,8 @@ export default function SignUp() {
               ]}
               hasFeedback>
               <Input.Password
-                placeholder="Nhập mật khẩu"
-                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                placeholder="Your password"
+                className="w-full mt-1 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
               />
             </Form.Item>
             <Form.Item
@@ -172,9 +163,120 @@ export default function SignUp() {
                 }),
               ]}>
               <Input.Password
-                placeholder="Xác nhận mật khẩu"
-                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                placeholder="Confirm password"
+                className="w-full mt-1 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
               />
+            </Form.Item>
+            <Form.Item
+              name="userName"
+              hasFeedback
+              rules={[
+                {
+                  required: true,
+                  message: "Vui lòng nhập thông tin!",
+                },
+              ]}>
+              <Input
+                placeholder="Your Name"
+                className="w-full mt-1 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+              />
+            </Form.Item>
+            <Form.Item
+              name="gender"
+              label="Gender"
+              hasFeedback
+              rules={[
+                {
+                  required: true,
+                  message: "Vui lòng nhập thông tin!",
+                },
+              ]}>
+              <Radio.Group>
+                <Radio value={1}>Male</Radio>
+                <Radio value={2}>Female</Radio>
+                <Radio value={3}>Other</Radio>
+              </Radio.Group>
+            </Form.Item>
+            <Form.Item
+              name="dob"
+              rules={[
+                ({ getFieldValue }) => ({
+                  validator(_, value) {
+                    const currentDate = new Date();
+                    const fiveYearsAgo = new Date();
+                    fiveYearsAgo.setFullYear(currentDate.getFullYear() - 10);
+                    if (value && isDateBeforeToday(value)) {
+                      return Promise.resolve();
+                    }
+                    return Promise.reject(
+                      new Error("Ngày sinh phải cách hiện tại ít nhất 10 năm")
+                    );
+                  },
+                }),
+              ]}>
+              <DatePicker format={"DD/MM/YYYY"} placeholder="Your Date" />
+            </Form.Item>
+            <Form.Item
+              name="email"
+              hasFeedback
+              rules={[
+                {
+                  required: true,
+                  message: "Vui lòng nhập thông tin!",
+                },
+                {
+                  type: "email",
+                  message: "Vui lòng nhập đúng định dạng E-mail!",
+                },
+              ]}>
+              <Input
+                placeholder="Nhập email"
+                className="w-full mt-1 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+              />
+            </Form.Item>
+            <Form.Item
+              name="address"
+              hasFeedback
+              rules={[
+                {
+                  required: true,
+                  message: "Vui lòng nhập thông tin!",
+                },
+              ]}>
+              <Input
+                placeholder="Your address"
+                className="w-full mt-1 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+              />
+            </Form.Item>
+            <Form.Item
+              name="phoneNumber"
+              hasFeedback
+              rules={[
+                {
+                  pattern: getRegexPhoneNumber(),
+                  message: "Vui lòng nhập số điện thoại hợp lệ",
+                },
+              ]}>
+              <Input
+                placeholder="Your phone number"
+                className="w-full mt-1 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+              />
+            </Form.Item>
+            <Form.Item
+              name="role"
+              label="Role"
+              hasFeedback
+              rules={[
+                {
+                  required: true,
+                  message: "Vui lòng nhập thông tin!",
+                },
+              ]}>
+              <Radio.Group>
+                <Radio value={1}>1</Radio>
+                <Radio value={2}>2</Radio>
+                <Radio value={3}>3</Radio>
+              </Radio.Group>
             </Form.Item>
             <button
               type="submit"
