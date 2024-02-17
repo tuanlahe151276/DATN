@@ -21,6 +21,16 @@ module.exports = {
       backgroundPosition: {
         no: "0 0",
       },
+      backgroundSize: {
+        auto: "auto",
+        cover: "cover",
+        contain: "contain",
+        "50%": "50%",
+        paymentSize: "324px 33px",
+      },
+      backgroundImage: {
+        payment: "url('../src/assets/images/methodPaymentIcon.jpg')",
+      },
       width: {
         150: "150px",
         190: "190px",
