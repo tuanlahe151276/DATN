@@ -5,3 +5,5 @@ export { default as IconZalo } from "./iconZalo.svg";
 export { default as MethodPaymentIcon } from "./methodPaymentIcon.jpg";
 export { default as DMCABadge } from "./dmcaBadge.png";
 export { default as LogoBCT } from "./boCongThuong.png";
+export { default as Star } from "./star.png";
+export { default as SupportBG } from "./supportBg.jpg";
