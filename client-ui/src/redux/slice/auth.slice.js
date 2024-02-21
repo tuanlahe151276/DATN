@@ -10,7 +10,7 @@ const authSlice = createSlice({
       const {
         _id = "",
         account,
-        userName = "",
+        userName="",
         role = 0,
         phoneNumber = "",
         address = "",
@@ -36,6 +36,7 @@ const authSlice = createSlice({
         createdAt: createdAt,
         access_token: access_token,
         refresh_token: refresh_token,
+
       };
     },
     updateAccessToken: (state, action) => {
