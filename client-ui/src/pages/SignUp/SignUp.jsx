@@ -9,7 +9,6 @@ import {
   getRegexPhoneNumber,
 } from "../../utils/stringsUtils";
 import { isDateBeforeToday } from "../../utils/function";
-import dayjs from "dayjs";
 
 export default function SignUp() {
   const [form] = Form.useForm();
@@ -40,7 +39,7 @@ export default function SignUp() {
       });
       if (res && res.status === "ERROR") {
         alert("error", res.message);
-      } else if (res.data) {
+      } else if (res.status === "OK") {
         alert("success", "Đăng ký thành công");
         form.resetFields();
         setFormValue(defaultValue);

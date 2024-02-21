@@ -12,6 +12,7 @@ module.exports = {
       },
       boxShadow: {
         before: "0px -10px 0 0 rgb(243,244,246)",
+        topLocation: "0 0 10px 1px rgb(0 0 0 /10%)",
         card: "0px 2px 1.5px 0px rgb(204 204 204)",
         newShadow: "3.5px 6px 18px 0 rgb(0 0 0 /10%)",
         tabShadow: "6px 0px 20px 0 #0000008c",
@@ -20,6 +21,16 @@ module.exports = {
       },
       backgroundPosition: {
         no: "0 0",
+      },
+      backgroundSize: {
+        auto: "auto",
+        cover: "cover",
+        contain: "contain",
+        "50%": "50%",
+        paymentSize: "324px 33px",
+      },
+      backgroundImage: {
+        payment: "url('../src/assets/images/methodPaymentIcon.jpg')",
       },
       width: {
         150: "150px",
