@@ -4,3 +4,7 @@ export { default as BackTopButton } from "./BackTopButton";
 export { default as RadioButton } from "./RadioButton";
 export { default as SelectItem } from "./SelectItem";
 export { default as PostItem } from "./PostItem";
+export { default as PaginationNumber } from "./PaginationNumber";
+export { default as AsideSection } from "./AsideSection";
+export { default as ListLink } from "./ListLink";
+export { default as ItemLink } from "./ItemLink";

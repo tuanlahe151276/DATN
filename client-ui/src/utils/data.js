@@ -38,7 +38,8 @@ export const listPrice = [
     text: "Từ 15 - 20 triệu đồng",
     label: "15 - 20 triệu",
     value: [75, 100],
-  },{
+  },
+  {
     text: "Trên 20 triệu đồng",
     label: "Trên 20 triệu",
     value: [100, 100],
@@ -69,7 +70,8 @@ export const listAcreage = [
     text: "Từ 70m2 - 90m2",
     label: "70 - 90m2",
     value: [70, 90],
-  },{
+  },
+  {
     text: "Từ 90m2 - 100m2",
     label: "90 - 100m2",
     value: [90, 100],
@@ -156,5 +158,153 @@ export const marksAcreage = [
   {
     value: 100,
     label: "100",
+  },
+];
+export const listPost = [
+  {
+    href: "/",
+    image:
+      "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2023/04/06/img-0881_1680780295.jpg",
+    type: 5,
+    acreage: 15,
+    price: "1.5 triệu",
+    address: "Quận 7, Hồ Chí Minh",
+    userName: "Lê Tú",
+    avatar: "https://phongtro123.com/images/default-user.png",
+    phone: "0815777735",
+    zalo: "https://zalo.me/0815777735",
+    title: "Chính chủ cho thuê phòng riêng Chung cư Era Town Đức Khải , Quận 7",
+    date: "",
+    desc: " Chính chủ cho thuê phòng trọ trong căn hộ Chung cư Era Town Đức Khải.Khu chung cư rộng rãi, thoáng mát, an ninh, tiện ích đầy đủ, tổng diện tích hơn 10ha…",
+  },
+  {
+    href: "/",
+    image:
+      "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2023/04/06/img-0881_1680780295.jpg",
+    type: 5,
+    acreage: 15,
+    price: "1.5 triệu",
+    address: "Quận 7, Hồ Chí Minh",
+    userName: "Lê Tú",
+    avatar: "https://phongtro123.com/images/default-user.png",
+    phone: "0815777735",
+    zalo: "https://zalo.me/0815777735",
+    title: "Chính chủ cho thuê phòng riêng Chung cư Era Town Đức Khải , Quận 7",
+    date: "",
+    desc: " Chính chủ cho thuê phòng trọ trong căn hộ Chung cư Era Town Đức Khải.Khu chung cư rộng rãi, thoáng mát, an ninh, tiện ích đầy đủ, tổng diện tích hơn 10ha…",
+  },
+  {
+    href: "/",
+    image:
+      "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2023/04/06/img-0881_1680780295.jpg",
+    type: 4,
+    acreage: 15,
+    price: "1.5 triệu",
+    address: "Quận 7, Hồ Chí Minh",
+    userName: "Lê Tú",
+    avatar: "https://phongtro123.com/images/default-user.png",
+    phone: "0815777735",
+    zalo: "https://zalo.me/0815777735",
+    title: "Chính chủ cho thuê phòng riêng Chung cư Era Town Đức Khải , Quận 7",
+    date: "",
+    desc: " Chính chủ cho thuê phòng trọ trong căn hộ Chung cư Era Town Đức Khải.Khu chung cư rộng rãi, thoáng mát, an ninh, tiện ích đầy đủ, tổng diện tích hơn 10ha…",
+  },
+  {
+    href: "/",
+    image:
+      "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2023/04/06/img-0881_1680780295.jpg",
+    type: 4,
+    acreage: 15,
+    price: "1.5 triệu",
+    address: "Quận 7, Hồ Chí Minh",
+    userName: "Lê Tú",
+    avatar: "https://phongtro123.com/images/default-user.png",
+    phone: "0815777735",
+    zalo: "https://zalo.me/0815777735",
+    title: "Chính chủ cho thuê phòng riêng Chung cư Era Town Đức Khải , Quận 7",
+    date: "",
+    desc: " Chính chủ cho thuê phòng trọ trong căn hộ Chung cư Era Town Đức Khải.Khu chung cư rộng rãi, thoáng mát, an ninh, tiện ích đầy đủ, tổng diện tích hơn 10ha…",
+  },
+  {
+    href: "/",
+    image:
+      "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2023/04/06/img-0881_1680780295.jpg",
+    type: 3,
+    acreage: 15,
+    price: "1.5 triệu",
+    address: "Quận 7, Hồ Chí Minh",
+    userName: "Lê Tú",
+    avatar: "https://phongtro123.com/images/default-user.png",
+    phone: "0815777735",
+    zalo: "https://zalo.me/0815777735",
+    title: "Chính chủ cho thuê phòng riêng Chung cư Era Town Đức Khải , Quận 7",
+    date: "",
+    desc: " Chính chủ cho thuê phòng trọ trong căn hộ Chung cư Era Town Đức Khải.Khu chung cư rộng rãi, thoáng mát, an ninh, tiện ích đầy đủ, tổng diện tích hơn 10ha…",
+  },
+  {
+    href: "/",
+    image:
+      "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2023/04/06/img-0881_1680780295.jpg",
+    type: 3,
+    acreage: 15,
+    price: "1.5 triệu",
+    address: "Quận 7, Hồ Chí Minh",
+    userName: "Lê Tú",
+    avatar: "https://phongtro123.com/images/default-user.png",
+    phone: "0815777735",
+    zalo: "https://zalo.me/0815777735",
+    title: "Chính chủ cho thuê phòng riêng Chung cư Era Town Đức Khải , Quận 7",
+    date: "",
+    desc: " Chính chủ cho thuê phòng trọ trong căn hộ Chung cư Era Town Đức Khải.Khu chung cư rộng rãi, thoáng mát, an ninh, tiện ích đầy đủ, tổng diện tích hơn 10ha…",
+  },
+];
+
+export const rentalCatalog = [
+  {
+    title: "Cho thuê phòng trọ",
+    href: "/cho-thue-phong-tro",
+    count: 69.769,
+  },
+  {
+    title: "Cho thuê nhà nguyên căn",
+    href: "/nha-cho-thue",
+    count: 11.413,
+  },
+  {
+    title: "Cho thuê căn hộ",
+    href: "/cho-thue-can-ho",
+    count: 13.191,
+    list: [
+      {
+        title: "Cho thuê căn hộ mini",
+        href: "/cho-thue-can-ho-chung-cu-mini",
+      },
+      {
+        title: "Cho thuê căn hộ dịch vụ",
+        href: "/nha-cho-thue",
+      },
+    ],
+  },
+];
+export const priceCatalog = [
+  {
+    title: "Dưới 1 triệu",
+    href: "/cho-thue-phong-tro",
+  },
+  {
+    title: "Từ 1 - 2 triệu",
+    href: "/nha-cho-thue",
+  },
+  {
+    title: "Từ 2 - 3 triệu",
+    href: "/cho-thue-can-ho",
+  },
+  {
+    title: "Từ 3 - 5 triệu",
+    href: "/cho-thue-can-ho",
+  },
+  {
+    title: "Từ 5 - 7 triệu",
+    href: "/cho-thue-can-ho",
   },
 ];

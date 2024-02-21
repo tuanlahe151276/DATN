@@ -4,6 +4,8 @@ import {
   isNotActiveNavStyles,
 } from "../../../../assets/css/styles";
 import { PostItem } from "../../../../components";
+import { listPost } from "../../../../utils/data";
+import PaginationContent from "./PaginationContent";
 
 export default function MainContentLeft() {
   return (
@@ -40,8 +42,11 @@ export default function MainContentLeft() {
         </div>
 
         <ul className="w-full">
-          <PostItem />
+          {listPost?.map((item, index) => (
+            <PostItem item={item} key={index} />
+          ))}
         </ul>
+        <PaginationContent />
       </section>
     </div>
   );
