@@ -307,4 +307,119 @@ export const priceCatalog = [
     title: "Từ 5 - 7 triệu",
     href: "/cho-thue-can-ho",
   },
+  {
+    title: "Từ 7 - 10 triệu",
+    href: "/cho-thue-can-ho",
+  },
+  {
+    title: "Từ 10 - 15 triệu",
+    href: "/cho-thue-can-ho",
+  },
+  {
+    title: "Từ 15 - 20 triệu",
+    href: "/cho-thue-can-ho",
+  },
+  {
+    title: "Trên 20 triệu",
+    href: "/cho-thue-can-ho",
+  },
+];
+export const acreageCatalog = [
+  {
+    title: "Dưới 20 m2",
+    href: "/?dien_tich_den=20",
+  },
+  {
+    title: "Từ 20 - 30m2",
+    href: "/nha-cho-thue",
+  },
+  {
+    title: "Từ 30 - 50m2",
+    href: "/cho-thue-can-ho",
+  },
+  {
+    title: "Từ 50 - 70m2",
+    href: "/cho-thue-can-ho",
+  },
+  {
+    title: "Từ 70 - 90m2",
+    href: "/cho-thue-can-ho",
+  },
+  {
+    title: "Từ 90 - 100m2",
+    href: "/cho-thue-can-ho",
+  },
+  {
+    title: "Trên 100m2",
+    href: "/cho-thue-can-ho",
+  },
+];
+
+export const newPostList = [
+  {
+    title: "Quy trình đăng ký tạm trú cho người thuê phòng trọ mới nhất",
+    href: "/?dien_tich_den=20",
+  },
+  {
+    title: "Thủ tục thuê phòng trọ chính xác dành cho người nước ngoài",
+    href: "/nha-cho-thue",
+  },
+  {
+    title: "Cho thuê phòng trọ có cần đăng ký giấy phép kinh doanh hay không?",
+    href: "/cho-thue-can-ho",
+  },
+  {
+    title: "Kinh doanh cho thuê phòng trọ cần đóng những loại thuế nào?",
+    href: "/cho-thue-can-ho",
+  },
+  {
+    title:
+      "Sinh viên Hà Nội nên ở trọ hay ký túc xá? Cần lưu ý điều gì khi thuê trọ?",
+    href: "/cho-thue-can-ho",
+  },
+  {
+    title: 'Chia sẻ "mẹo" đăng tin cho thuê phòng trọ hiệu quả tại Phongtro123',
+    href: "/cho-thue-can-ho",
+  },
+];
+export const canCareList = [
+  {
+    title: "Mẫu hợp đồng cho thuê phòng trọ",
+    href: "/?dien_tich_den=20",
+  },
+  {
+    title: "Cẩn thận các kiểu lừa đảo khi thuê phòng trọ",
+    href: "/nha-cho-thue",
+  },
+  {
+    title: "Kinh nghiệm thuê phòng trọ Sinh Viên",
+    href: "/cho-thue-can-ho",
+  },
+];
+
+export const newPostCatalog = [
+  {
+    title: "Cho thuê phòng trọ tại Quận 7 với diện tích từ 18 đến 20m²",
+    href: "/cho-thue-phong-tro-tai-quan-7-voi-dien-tich-tu-18-den-20m2-pr647153.html",
+    image:
+      "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2024/02/22/423568458-2387388444983581-2856706696427636943-n_1708596757.jpg",
+    price: "3.4 triệu",
+    date: "",
+  },
+  {
+    title: "Cho thuê phòng trọ tại Quận 7 với diện tích từ 18 đến 20m²",
+    href: "/cho-thue-phong-tro-tai-quan-7-voi-dien-tich-tu-18-den-20m2-pr647153.html",
+    image:
+      "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2024/02/21/1689908317139_1708480116.jpg",
+    price: "3.4 triệu",
+    date: "",
+  },
+  {
+    title: "Cho thuê phòng trọ tại Quận 7 với diện tích từ 18 đến 20m²",
+    href: "/cho-thue-phong-tro-tai-quan-7-voi-dien-tich-tu-18-den-20m2-pr647153.html",
+    image:
+      "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2024/02/22/img-1708588577627-1708595717748_1708596797.jpg",
+    price: "3.4 triệu",
+    date: "",
+  },
 ];
