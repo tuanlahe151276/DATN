@@ -1,5 +1,12 @@
-import { AsideSection, ListLink } from "../../../../components";
-import { priceCatalog, rentalCatalog } from "../../../../utils/data";
+import { AsideSection, ListLink, ListNewPost } from "../../../../components";
+import {
+  acreageCatalog,
+  canCareList,
+  newPostCatalog,
+  newPostList,
+  priceCatalog,
+  rentalCatalog,
+} from "../../../../utils/data";
 
 export default function MainContentAside() {
   return (
@@ -13,8 +20,20 @@ export default function MainContentAside() {
         title="Xem theo giá"
       />
       <AsideSection
-        children={<ListLink items={priceCatalog} notFullWidth />}
+        children={<ListLink items={acreageCatalog} notFullWidth />}
         title="Xem theo diện tích"
+      />
+      <AsideSection
+        children={<ListNewPost items={newPostCatalog} />}
+        title="Tin mới đăng"
+      />
+      <AsideSection
+        children={<ListLink items={newPostList} />}
+        title="Bài viết mới"
+      />
+      <AsideSection
+        children={<ListLink items={canCareList} />}
+        title="Có thể bạn quan tâm"
       />
     </aside>
   );
