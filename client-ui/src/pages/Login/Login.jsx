@@ -4,6 +4,7 @@ import * as UserService from "../../services/auth.api";
 import { useDispatch } from "react-redux";
 import jwt_decode from "jwt-decode";
 import { setUser } from "../../redux/slice/auth.slice";
+import { BackgroundValidate } from "../../components";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -63,45 +64,47 @@ export default function Login() {
     );
   };
   return (
-    <main className="w-full flex z-0">
+    <main className="w-full flex z-0 container mx-auto lg:h-full items-center">
+      <BackgroundValidate />
       <div className="flex-1 flex items-center justify-center h-screen">
-        <div className="w-full max-w-md space-y-8 px-4 bg-white text-gray-600 sm:px-0">
+        <div className="w-full max-w-md flex flex-col gap-y-2 px-4 bg-white text-gray-600 sm:px-0">
           <div className="text-center">
             <img src={""} width={100} className="mx-auto" alt="" />
             <div className="mt-2 space-y-2">
-              <h3 className="text-gray-800 text-2xl font-bold sm:text-3xl">
-                Đăng nhập với chúng tôi!
+              <h3 className="text-white border border-black rounded-md py-1 text-2xl font-bold sm:text-3xl w-full bg-orange-700">
+                Sign in with us!
               </h3>
-              <p className="flex items-center gap-x-1">
-                Bạn chưa có tài khoản?
+              <p className="flex items-center gap-x-1 text-sm">
+                Do not have an account?
                 <Link
                   to="/signup"
-                  className="font-medium text-indigo-600 hover:text-indigo-500">
-                  Đăng ký
+                  className="font-medium text-orange-700 hover:text-orange-600 underline">
+                  Sign Up
                 </Link>
               </p>
             </div>
           </div>
-          <form onSubmit={(e) => e.preventDefault()} className="space-y-5">
+          <form
+            onSubmit={(e) => e.preventDefault()}
+            className="flex flex-col w-full gap-y-1">
             <div>
-              <label className="font-medium">account</label>
+              <label className="font-medium">Account</label>
               <input
                 type="text"
                 onChange={(e) => setData({ ...data, account: e.target.value })}
                 value={data?.account}
                 required
-                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                className="w-full px-3 py-2 text-gray-500 bg-white outline-none border focus:border-orange-600 shadow-sm rounded-lg"
               />
             </div>
             <div>
               <label className="font-medium">Password</label>
               <input
-                autoComplete=""
                 type="password"
                 required
                 onChange={(e) => setData({ ...data, password: e.target.value })}
                 value={data?.password}
-                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                className="w-full px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-orange-600 shadow-sm rounded-lg"
               />
             </div>
             <div className="flex items-center justify-start text-sm">
@@ -113,18 +116,18 @@ export default function Login() {
                 />
                 <label
                   htmlFor="remember-me-checkbox"
-                  className="relative flex w-5 h-5 bg-white peer-checked:bg-indigo-600 rounded-md border ring-offset-2 ring-indigo-600 duration-150 peer-active:ring cursor-pointer after:absolute after:inset-x-0 after:top-[3px] after:m-auto after:w-1.5 after:h-2.5 after:border-r-2 after:border-b-2 after:border-white after:rotate-45"></label>
+                  className="relative flex w-5 h-5 bg-white peer-checked:bg-orange-600 rounded-md border ring-offset-2 ring-orange-600 duration-150 peer-active:ring cursor-pointer after:absolute after:inset-x-0 after:top-[3px] after:m-auto after:w-1.5 after:h-2.5 after:border-r-2 after:border-b-2 after:border-white after:rotate-45"></label>
                 <span>Remember me</span>
               </div> */}
               <Link
                 to="/forget-password"
-                className="text-center text-indigo-600 hover:text-indigo-500">
+                className="text-center text-orange-800 hover:text-orange-700">
                 Forget Password?
               </Link>
             </div>
             <button
               onClick={LoginWithUserPassword}
-              className="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150">
+              className="w-full px-4 py-2 text-white font-medium bg-orange-600 hover:bg-orange-700 active:bg-orange-600 rounded-lg duration-150">
               Login
             </button>
           </form>

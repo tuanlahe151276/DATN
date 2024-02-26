@@ -9,6 +9,7 @@ import {
   getRegexPhoneNumber,
 } from "../../utils/stringsUtils";
 import { isDateBeforeToday } from "../../utils/function";
+import { BackgroundValidate } from "../../components";
 
 export default function SignUp() {
   const [form] = Form.useForm();
@@ -52,51 +53,21 @@ export default function SignUp() {
     }
   };
   return (
-    <main className="w-full flex">
+    <main className="w-full flex z-0 container mx-auto lg:h-screen items-center">
+      <BackgroundValidate />
       <div className="flex-1 flex items-center justify-center h-auto lg:h-screen">
-        <div className="w-full max-w-md lg:space-y-8 px-4 bg-white text-gray-600 sm:px-0 flex flex-col gap-y-2">
-          <div className="flex flex-col">
+        <div className="w-full max-w-md px-4 bg-white text-gray-600 sm:px-0 flex flex-col gap-y-2">
+          <div className="text-center">
             <img
               src={""}
               className="lg:hidden w-14 lg:w-[100px] h-auto"
               alt="Logo"
             />
-            <div className="mt-1 lg:mt-5 flex flex-col gap-y-2">
-              <h3 className="text-gray-800 text-2xl font-bold sm:text-3xl">
-                Đăng ký
+            <div className="mt-2">
+              <h3 className="text-white border border-black rounded-md py-1 text-2xl font-bold sm:text-3xl w-full bg-orange-700">
+                Register Now!
               </h3>
-              <p className="flex items-center gap-x-1">
-                Bạn đã có tài khoản?
-                <Link
-                  to="/login"
-                  className="font-medium text-indigo-600 hover:text-indigo-500">
-                  Đăng nhập
-                </Link>
-              </p>
             </div>
-          </div>
-          <div className="flex gap-x-3">
-            <button className="flex items-center gap-x-1 justify-center py-2 border rounded-lg hover:border-gray-300 duration-150 active:bg-gray-100 basis-1/2 max-w-[50%] w-full">
-              <FcGoogle
-                className="text-2xl"
-                // onClick={googleAuth}
-              />
-              <span className="text-gray-600 font-semibold text-sm">
-                Tiếp tục với Google
-              </span>
-            </button>
-            <button className="flex items-center gap-x-1 justify-center py-2 border rounded-lg hover:border-gray-300 duration-150 active:bg-gray-100 basis-1/2 max-w-[50%] w-full">
-              <FaFacebook className="text-blue-500 text-2xl" />
-              <span className="text-gray-600 font-semibold text-sm">
-                Tiếp tục với Facebook
-              </span>
-            </button>
-          </div>
-          <div className="relative mt-1">
-            <span className="block w-full h-px bg-gray-300"></span>
-            <p className="inline-block w-fit text-sm bg-white px-2 absolute -top-2 inset-x-0 mx-auto">
-              Hoặc tiếp tục với:
-            </p>
           </div>
           <Form
             onFinish={createUser}
@@ -116,14 +87,19 @@ export default function SignUp() {
               ]}
               style={{
                 fontSize: 18,
+                marginBottom: 10,
               }}>
               <Input
                 placeholder="Your Account"
-                className="w-full mt-1 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                className="w-full mt-1 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-orange-600 shadow-sm rounded-lg"
               />
             </Form.Item>
             <Form.Item
               name="password"
+              style={{
+                fontSize: 18,
+                marginBottom: 10,
+              }}
               rules={[
                 {
                   required: true,
@@ -138,11 +114,15 @@ export default function SignUp() {
               hasFeedback>
               <Input.Password
                 placeholder="Your password"
-                className="w-full mt-1 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                className="w-full mt-1 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-orange-600 shadow-sm rounded-lg"
               />
             </Form.Item>
             <Form.Item
               name="confirmPassword"
+              style={{
+                fontSize: 18,
+                marginBottom: 10,
+              }}
               dependencies={["password"]}
               hasFeedback
               rules={[
@@ -163,12 +143,16 @@ export default function SignUp() {
               ]}>
               <Input.Password
                 placeholder="Confirm password"
-                className="w-full mt-1 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                className="w-full mt-1 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-orange-600 shadow-sm rounded-lg"
               />
             </Form.Item>
             <Form.Item
               name="userName"
               hasFeedback
+              style={{
+                fontSize: 18,
+                marginBottom: 10,
+              }}
               rules={[
                 {
                   required: true,
@@ -177,13 +161,17 @@ export default function SignUp() {
               ]}>
               <Input
                 placeholder="Your Name"
-                className="w-full mt-1 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                className="w-full mt-1 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-orange-600 shadow-sm rounded-lg"
               />
             </Form.Item>
             <Form.Item
               name="gender"
               label="Gender"
               hasFeedback
+              style={{
+                fontSize: 18,
+                marginBottom: 10,
+              }}
               rules={[
                 {
                   required: true,
@@ -212,11 +200,19 @@ export default function SignUp() {
                     );
                   },
                 }),
-              ]}>
+              ]}
+              style={{
+                fontSize: 18,
+                marginBottom: 10,
+              }}>
               <DatePicker format={"DD/MM/YYYY"} placeholder="Your Date" />
             </Form.Item>
             <Form.Item
               name="email"
+              style={{
+                fontSize: 18,
+                marginBottom: 10,
+              }}
               hasFeedback
               rules={[
                 {
@@ -229,13 +225,17 @@ export default function SignUp() {
                 },
               ]}>
               <Input
-                placeholder="Nhập email"
-                className="w-full mt-1 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                placeholder="Your email"
+                className="w-full mt-1 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-orange-600 shadow-sm rounded-lg"
               />
             </Form.Item>
             <Form.Item
               name="address"
               hasFeedback
+              style={{
+                fontSize: 18,
+                marginBottom: 10,
+              }}
               rules={[
                 {
                   required: true,
@@ -244,12 +244,16 @@ export default function SignUp() {
               ]}>
               <Input
                 placeholder="Your address"
-                className="w-full mt-1 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                className="w-full mt-1 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-orange-600 shadow-sm rounded-lg"
               />
             </Form.Item>
             <Form.Item
               name="phoneNumber"
               hasFeedback
+              style={{
+                fontSize: 18,
+                marginBottom: 10,
+              }}
               rules={[
                 {
                   pattern: getRegexPhoneNumber(),
@@ -258,13 +262,17 @@ export default function SignUp() {
               ]}>
               <Input
                 placeholder="Your phone number"
-                className="w-full mt-1 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                className="w-full mt-1 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-orange-600 shadow-sm rounded-lg"
               />
             </Form.Item>
             <Form.Item
               name="role"
               label="Role"
               hasFeedback
+              style={{
+                fontSize: 18,
+                marginBottom: 10,
+              }}
               rules={[
                 {
                   required: true,
@@ -279,10 +287,40 @@ export default function SignUp() {
             </Form.Item>
             <button
               type="submit"
-              className="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150">
-              Đăng ký
+              className="w-full px-4 py-2 text-white font-medium bg-orange-600 hover:bg-orange-700 active:bg-orange-600 rounded-lg duration-150">
+              Sign Up
             </button>
           </Form>
+          <div className="w-full text-sm">
+            <p className="flex items-center gap-x-1">
+              Do you already have an account?
+              <Link
+                to="/login"
+                className="font-medium text-orange-700 hover:text-orange-600 underline">
+                Sign In
+              </Link>
+            </p>
+          </div>
+          <div className="relative mt-2">
+            <span className="block w-full h-px bg-gray-300"></span>
+            <p className="inline-block w-fit text-sm bg-white px-2 absolute -top-[10px] inset-x-0 mx-auto">
+              Or continue with:
+            </p>
+          </div>
+          <div className="flex gap-x-3 mt-3">
+            <button className="flex items-center gap-x-1 justify-center py-2 border rounded-lg hover:border-gray-300 duration-150 active:bg-gray-100 basis-1/2 max-w-[50%] w-full">
+              <FcGoogle className="text-2xl" />
+              <span className="text-gray-600 font-semibold text-sm">
+                Continue with Google
+              </span>
+            </button>
+            <button className="flex items-center gap-x-1 justify-center py-2 border rounded-lg hover:border-gray-300 duration-150 active:bg-gray-100 basis-1/2 max-w-[50%] w-full">
+              <FaFacebook className="text-blue-500 text-2xl" />
+              <span className="text-gray-600 font-semibold text-sm">
+                Continue with Facebook
+              </span>
+            </button>
+          </div>
         </div>
       </div>
     </main>
