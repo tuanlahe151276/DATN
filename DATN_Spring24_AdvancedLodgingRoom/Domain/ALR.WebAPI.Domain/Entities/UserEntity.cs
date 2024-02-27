@@ -6,7 +6,7 @@ namespace ALR.WebAPI.Domain.Entities
     public class UserEntity
     {
         [Key]
-        public Guid UserID { get; set; }
+        public Guid UserEntityID { get; set; }
 
         [Required]
         public string Account { get; set; }
@@ -26,7 +26,11 @@ namespace ALR.WebAPI.Domain.Entities
         [Required]
         public Guid ProfileID { get; set; }
 
+       
+
         [ForeignKey(nameof(ProfileID))]
         public virtual ProfileEntity? Profile { get; set; }
+       
+
     }
 }

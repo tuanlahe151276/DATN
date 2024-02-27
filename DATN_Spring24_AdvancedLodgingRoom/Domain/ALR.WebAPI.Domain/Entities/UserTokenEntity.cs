@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ALR.WebAPI.Domain.Entities
 {
@@ -15,5 +16,7 @@ namespace ALR.WebAPI.Domain.Entities
 
         public DateTime CreationTime { get; set; }
         public Boolean IsActive { get; set; }
+        [ForeignKey(nameof(UserID))]
+        public virtual UserEntity? userEntity { get; set; }
     }
 }

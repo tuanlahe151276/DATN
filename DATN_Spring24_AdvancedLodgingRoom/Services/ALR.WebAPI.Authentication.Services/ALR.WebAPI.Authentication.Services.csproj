@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\Data\ALR.WebAPI.Base\ALR.WebAPI.Base.csproj" />
     <ProjectReference Include="..\..\Data\ALR.WebAPI.Data\ALR.WebAPI.Database.csproj" />
     <ProjectReference Include="..\..\Data\ALR.WebAPI.Dto\ALR.WebAPI.Dto.csproj" />

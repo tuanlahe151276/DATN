@@ -3,6 +3,8 @@ using ALR.WebAPI.Authentication.Services.Implement;
 using ALR.WebAPI.Database;
 using ALR.WebAPI.Database.Abstract;
 using ALR.WebAPI.Database.Repositories;
+using ALR.WebAPI.Service.Abstract;
+using ALR.WebAPI.Service.Implement;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -26,6 +28,8 @@ namespace ALR.WebAPI.Infrastructure.Configuration
             service.AddScoped(typeof(IAuthenticationService), typeof(AuthenticationService));
             service.AddScoped(typeof(ISaveUserToken), typeof(SaveUserToken));
             service.AddScoped(typeof(IRegistrationAccountService), typeof(RegistrationAccountService));
+            service.AddScoped(typeof(IPostService), typeof(PostService));
+            service.AddScoped(typeof(IAccountService), typeof(AccountService));
 
 
         }

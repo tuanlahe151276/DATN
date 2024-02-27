@@ -10,6 +10,7 @@
     <ProjectReference Include="..\..\Data\ALR.WebAPI.Dto\ALR.WebAPI.Dto.csproj" />
   </ItemGroup>
 <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.1.16" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.26" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.1.38" />

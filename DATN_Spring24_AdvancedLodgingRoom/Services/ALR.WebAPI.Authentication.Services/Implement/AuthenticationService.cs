@@ -33,7 +33,7 @@ namespace ALR.WebAPI.Authentication.Services.Implement
                 new Claim(JwtRegisteredClaimNames.Exp,DateTime.Now.AddMinutes(15).ToString("dd/MM/yyyy"), ClaimValueTypes.String, _configuration["TokenBearer:Issuer"]),
                 new Claim(ClaimTypes.NameIdentifier, account.Account, ClaimValueTypes.String, _configuration["TokenBearer:Issuer"]),
                 new Claim(BaseConstants.USER_CLAIM_ROLE,account.UserRole.ToString(),ClaimValueTypes.String, _configuration["TokenBearer:Issuer"]),
-                new Claim(BaseConstants.USER_CLAIM_ID,account.UserID.ToString(),ClaimValueTypes.String, _configuration["TokenBearer:Issuer"])
+                new Claim(BaseConstants.USER_CLAIM_ID,account.UserEntityID.ToString(),ClaimValueTypes.String, _configuration["TokenBearer:Issuer"])
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["TokenBearer:SignatureKey"]));
@@ -83,7 +83,7 @@ namespace ALR.WebAPI.Authentication.Services.Implement
         }
         public async Task<UserEntity> FindByUserID(string userID)
         {
-            return await _repository.GetByConditionAsync(x => x.UserID.Equals(userID));
+            return await _repository.GetByConditionAsync(x => x.UserEntityID.Equals(userID));
         }
 
         public async Task ValidateToken(TokenValidatedContext tokenValidatedContext)

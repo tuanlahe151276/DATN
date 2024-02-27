@@ -10,10 +10,11 @@ namespace ALR.WebAPI.Database
         }
 
 
-        public DbSet<User> Users { get; set; }
+       
         public DbSet<ProfileEntity> Profiles { get; set; }
         public DbSet<UserEntity> UserEntities { get; set; }
         public DbSet<UserTokenEntity> UserTokenEnties { get; set; }
+        public DbSet<PostEntity> PostEnties { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

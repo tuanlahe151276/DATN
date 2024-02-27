@@ -33,7 +33,7 @@ namespace ALR.WebAPI.Authentication.Services.Implement
                 {
 
                     Account = dto.account,
-                    UserID = Guid.NewGuid(),
+                    UserEntityID = Guid.NewGuid(),
                     Password = dto.password,
                     Email = dto.email,
                     Active = false,

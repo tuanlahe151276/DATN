@@ -38,7 +38,7 @@ namespace ALR.WebAPI.Control.Controllers.Authentications
                     {
                         AccessToken = check1.ToString(),
                         RefreshToken = refreshToken,
-                        UserID = acc.UserID,
+                        UserID = acc.UserEntityID,
                         ExpireDateAccessToken = expiredAccessToken,
                         ExpireDateRefreshToken = expiredRereshToken,
                         CreationTime = DateTime.Now,
@@ -51,7 +51,7 @@ namespace ALR.WebAPI.Control.Controllers.Authentications
                         AccessToken = accessToken,
                         RefreshToken = refreshToken,
                         Account = account.Account,
-                        UserID = acc.UserID
+                        UserID = acc.UserEntityID
                     });
                 }
 
