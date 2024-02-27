@@ -258,7 +258,62 @@ export const listPost = [
     desc: " Chính chủ cho thuê phòng trọ trong căn hộ Chung cư Era Town Đức Khải.Khu chung cư rộng rãi, thoáng mát, an ninh, tiện ích đầy đủ, tổng diện tích hơn 10ha…",
   },
 ];
+export const listNews = [
+  {
+    href: "/quy-trinh-dang-ky-tam-tru-cho-nguoi-thue-phong-tro-moi-nhat",
+    image:
+      "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2024/01/19/dang-ky-tam-tru-cho-nguoi-thue-phong-tro_1705647964.jpg",
 
+    title: "Quy trình đăng ký tạm trú cho người thuê phòng trọ mới nhất",
+    date: "",
+    desc: "Quy trình đăng ký tạm trú chính xác dành cho người thuê phòng trọ. Đăng ký tạm trú là gì? Tạm trú là nơi công dân sinh sống trong một khoảng thời gian …",
+  },
+  {
+    href: "/quy-trinh-dang-ky-tam-tru-cho-nguoi-thue-phong-tro-moi-nhat",
+    image:
+      "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2024/01/19/dang-ky-tam-tru-cho-nguoi-thue-phong-tro_1705647964.jpg",
+
+    title: "Quy trình đăng ký tạm trú cho người thuê phòng trọ mới nhất",
+    date: "",
+    desc: "Quy trình đăng ký tạm trú chính xác dành cho người thuê phòng trọ. Đăng ký tạm trú là gì? Tạm trú là nơi công dân sinh sống trong một khoảng thời gian …",
+  },
+  {
+    href: "/quy-trinh-dang-ky-tam-tru-cho-nguoi-thue-phong-tro-moi-nhat",
+    image:
+      "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2024/01/19/dang-ky-tam-tru-cho-nguoi-thue-phong-tro_1705647964.jpg",
+
+    title: "Quy trình đăng ký tạm trú cho người thuê phòng trọ mới nhất",
+    date: "",
+    desc: "Quy trình đăng ký tạm trú chính xác dành cho người thuê phòng trọ. Đăng ký tạm trú là gì? Tạm trú là nơi công dân sinh sống trong một khoảng thời gian …",
+  },
+  {
+    href: "/quy-trinh-dang-ky-tam-tru-cho-nguoi-thue-phong-tro-moi-nhat",
+    image:
+      "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2024/01/19/dang-ky-tam-tru-cho-nguoi-thue-phong-tro_1705647964.jpg",
+
+    title: "Quy trình đăng ký tạm trú cho người thuê phòng trọ mới nhất",
+    date: "",
+    desc: "Quy trình đăng ký tạm trú chính xác dành cho người thuê phòng trọ. Đăng ký tạm trú là gì? Tạm trú là nơi công dân sinh sống trong một khoảng thời gian …",
+  },
+  {
+    href: "/quy-trinh-dang-ky-tam-tru-cho-nguoi-thue-phong-tro-moi-nhat",
+    image:
+      "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2024/01/19/dang-ky-tam-tru-cho-nguoi-thue-phong-tro_1705647964.jpg",
+
+    title: "Quy trình đăng ký tạm trú cho người thuê phòng trọ mới nhất",
+    date: "",
+    desc: "Quy trình đăng ký tạm trú chính xác dành cho người thuê phòng trọ. Đăng ký tạm trú là gì? Tạm trú là nơi công dân sinh sống trong một khoảng thời gian …",
+  },
+  {
+    href: "/quy-trinh-dang-ky-tam-tru-cho-nguoi-thue-phong-tro-moi-nhat",
+    image:
+      "https://pt123.cdn.static123.com/images/thumbs/450x300/fit/2024/01/19/dang-ky-tam-tru-cho-nguoi-thue-phong-tro_1705647964.jpg",
+
+    title: "Quy trình đăng ký tạm trú cho người thuê phòng trọ mới nhất",
+    date: "",
+    desc: "Quy trình đăng ký tạm trú chính xác dành cho người thuê phòng trọ. Đăng ký tạm trú là gì? Tạm trú là nơi công dân sinh sống trong một khoảng thời gian …",
+  },
+];
 export const rentalCatalog = [
   {
     title: "Cho thuê phòng trọ",

@@ -1,13 +1,34 @@
-export default function MainHeader() {
+import { Link } from "react-router-dom";
+import ROUTER from "../../../routers";
+
+export default function MainHeader({
+  title = "",
+  description = "",
+  navLink = "",
+  navName = "",
+}) {
   return (
     <header className="mb-4 text-[#333]">
-      <h1 className="text-[28px] leading-[1.2] mb-[5px] text-center font-semibold">
-        Tìm kiếm chỗ thuê ưng ý
+      {navLink && (
+        <div className="flex items-center text-sm gap-x-1 mb-1">
+          <Link
+            to={ROUTER.HOME}
+            className="text-blue-600 hover:text-orange-600">
+            Trang chủ
+          </Link>
+          <span>&gt;</span>
+          <Link to={navLink} className="text-black hover:text-orange-600">
+            {navName}
+          </Link>
+        </div>
+      )}
+      <h1
+        className={`${navLink ? "text-left" : "text-center"} text-[28px] leading-[1.2] mb-[5px] font-semibold`}>
+        {title}
       </h1>
-      <p className="text-sm font-normal leading-[1.5] m-0 text-[#65676b] text-center w-full">
-        Kênh thông tin Phòng trọ số 1 Việt Nam - Website đăng tin cho thuê phòng
-        trọ, nhà nguyên căn, căn hộ, ở ghép nhanh, hiệu quả với 100.000+ tin
-        đăng và 2.500.000 lượt xem mỗi tháng.
+      <p
+        className={`${navLink ? "text-left" : "text-center"} text-sm font-normal leading-[1.5] m-0 text-[#65676b] w-full`}>
+        {description}
       </p>
     </header>
   );

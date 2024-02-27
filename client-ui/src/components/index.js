@@ -10,4 +10,5 @@ export { default as ListLink } from "./ListLink";
 export { default as ItemLink } from "./ItemLink";
 export { default as NewPostItem } from "./NewPostItem";
 export { default as ListNewPost } from "./ListNewPost";
+export { default as NewsItem } from "./NewsItem";
 export { default as BackgroundValidate } from "./BackgroundValidate";

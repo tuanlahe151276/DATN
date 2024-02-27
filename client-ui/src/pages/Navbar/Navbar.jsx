@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { isActiveStyles, isNotActiveStyles } from "../../assets/css/styles";
-
+import ROUTER from "../../routers";
 export default function Navbar() {
   return (
     <nav className="w-full bg-[#1266dd]">
@@ -16,49 +16,49 @@ export default function Navbar() {
           className={({ isActive }) =>
             isActive ? isActiveStyles : isNotActiveStyles
           }
-          to={"/a"}>
+          to={ROUTER.CHO_THUE_PHONG_TRO}>
           Cho thuê phòng trọ
         </NavLink>
         <NavLink
           className={({ isActive }) =>
             isActive ? isActiveStyles : isNotActiveStyles
           }
-          to={"/b"}>
+          to={ROUTER.NHA_CHO_THUE}>
           Nhà cho thuê
         </NavLink>
         <NavLink
           className={({ isActive }) =>
             isActive ? isActiveStyles : isNotActiveStyles
           }
-          to={"/c"}>
+          to={ROUTER.CHO_THUE_CAN_HO}>
           Cho thuê căn hộ
         </NavLink>
         <NavLink
           className={({ isActive }) =>
             isActive ? isActiveStyles : isNotActiveStyles
           }
-          to={"/d"}>
+          to={ROUTER.MAT_BANG}>
           Mặt bằng, văn phòng
         </NavLink>
         <NavLink
           className={({ isActive }) =>
             isActive ? isActiveStyles : isNotActiveStyles
           }
-          to={"/e"}>
+          to={ROUTER.TIM_NGUOI_O_GHEP}>
           Tìm người ở ghép
         </NavLink>
         <NavLink
           className={({ isActive }) =>
             isActive ? isActiveStyles : isNotActiveStyles
           }
-          to={"/f"}>
+          to={ROUTER.TIN_TUC}>
           Tin tức
         </NavLink>
         <NavLink
           className={({ isActive }) =>
             isActive ? isActiveStyles : isNotActiveStyles
           }
-          to={"/g"}>
+          to={ROUTER.BANG_GIA_DICH_VU}>
           Bảng giá dịch vụ
         </NavLink>
       </ul>

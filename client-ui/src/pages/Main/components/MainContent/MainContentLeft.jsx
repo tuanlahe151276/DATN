@@ -7,7 +7,7 @@ import { PostItem } from "../../../../components";
 import { listPost } from "../../../../utils/data";
 import PaginationContent from "./PaginationContent";
 
-export default function MainContentLeft() {
+export default function MainContentLeft({ list = null }) {
   return (
     <div className="w-[850px]">
       <section className="mb-5 p-5 bg-white border border-[#dedede] rounded-lg">
