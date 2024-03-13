@@ -478,3 +478,53 @@ export const newPostCatalog = [
     date: "",
   },
 ];
+export const paymentList = [
+  {
+    name: "Chuyển khoản",
+    image: "https://phongtro123.com/images/bank-transfer.png",
+    href: "https://phongtro123.com/quan-ly/nap-tien/chuyen-khoan.html",
+    description: "Chuyển khoản trực tiếp",
+  },
+  {
+    name: "Thẻ ATM Internet Banking",
+    image: "https://phongtro123.com/images/payment-method.svg",
+    href: "https://phongtro123.com/quan-ly/nap-tien/atm-internet-banking.html",
+    description: "Thẻ ATM Internet Banking",
+  },
+  {
+    name: "Thẻ tín dụng quốc tế",
+    image: "https://phongtro123.com/images/credit-card.png",
+    href: "https://phongtro123.com/quan-ly/nap-tien/chuyen-khoan.html",
+    description: "Nạp tiền bằng thẻ tín dụng quốc tế",
+  },
+  {
+    name: "Tiền mặt",
+    image: "https://phongtro123.com/images/cash.svg",
+    href: "https://phongtro123.com/quan-ly/nap-tien/chuyen-khoan.html",
+    description: "Tiền mặt",
+  },
+  {
+    name: "MOMO",
+    image: "https://phongtro123.com/images/momo.png",
+    href: "https://phongtro123.com/quan-ly/nap-tien/chuyen-khoan.html",
+    description: "Nạp tiền bằng MOMO",
+  },
+  {
+    name: "ZaloPay",
+    image: "https://phongtro123.com/images/zalopay.png",
+    href: "https://phongtro123.com/quan-ly/nap-tien/chuyen-khoan.html",
+    description: "Nạp tiền bằng ZaloPay",
+  },
+  {
+    name: "Điểm giao dịch, cửa hàng tiện lợi",
+    image: "https://phongtro123.com/images/online-store.svg",
+    href: "https://phongtro123.com/quan-ly/nap-tien/chuyen-khoan.html",
+    description: "Điểm giao dịch, cửa hàng tiện lợi",
+  },
+  {
+    name: "Quét mã QRCode",
+    image: "https://phongtro123.com/images/qr-code.png",
+    href: "https://phongtro123.com/quan-ly/nap-tien/chuyen-khoan.html",
+    description: "Quét mã QRCode",
+  },
+];

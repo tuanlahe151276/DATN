@@ -12,3 +12,7 @@ export { default as NewPostItem } from "./NewPostItem";
 export { default as ListNewPost } from "./ListNewPost";
 export { default as NewsItem } from "./NewsItem";
 export { default as BackgroundValidate } from "./BackgroundValidate";
+export { default as ButtonPrimary } from "./ButtonPrimary";
+export { default as Rating } from "./Rating";
+export { default as TestimonialItem } from "./TestimonialItem";
+export { default as PaymentMethodItem } from "./PaymentMethodItem";

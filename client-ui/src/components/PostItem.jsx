@@ -1,6 +1,6 @@
 import { FaHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { Star } from "../assets/images";
+import Rating from "./Rating";
 export default function PostItem({ item = null }) {
   return (
     <li
@@ -25,16 +25,7 @@ export default function PostItem({ item = null }) {
           <Link
             className={`${item?.type === 5 ? "text-[#E13427]" : item?.type === 4 ? "text-[#ea2e9d]" : "text-[#3763e0]"}  uppercase no-underline hover:underline`}
             to="/phong-share-tro-chung-cu-quan-7-pr596546.html">
-            <span
-              className="inline-block mr-1 h-[14px] bg-[length:14px_14px]"
-              style={{
-                width: `${item?.type * 14}px`,
-                backgroundImage: `url("${Star}")`,
-                backgroundPositionX: "left",
-                backgroundPositionY: "center",
-                backgroundRepeat: "repeat-x",
-              }}
-            />
+            <Rating star={item?.type} height={14} />
             {item?.title}
           </Link>
         </h3>
