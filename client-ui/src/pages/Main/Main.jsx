@@ -10,6 +10,7 @@ import {
 import ROUTER from "../../routers";
 import News from "../News/News";
 import PriceList from "../PriceList/PriceList";
+import NewsDetail from "../NewsDetail/NewsDetail";
 
 export default function Main() {
   return (
@@ -137,6 +138,16 @@ export default function Main() {
           }
         />
         <Route path={ROUTER.BANG_GIA_DICH_VU} element={<PriceList />} />
+        <Route
+          path={ROUTER.TIN_TUC_CHI_TIET}
+          element={
+            <>
+              <NewsDetail />
+              <MainWhyUs />
+              <MainSupport />
+            </>
+          }
+        />
       </Routes>
     </main>
   );

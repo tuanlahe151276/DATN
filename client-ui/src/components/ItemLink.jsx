@@ -1,15 +1,9 @@
 import { MdKeyboardArrowRight } from "react-icons/md";
 
-export default function ItemLink({
-  item,
-  key,
-  sub = false,
-  notFullWidth = false,
-}) {
+export default function ItemLink({ item, sub = false, notFullWidth = false }) {
   return (
     <li
-      className={`${sub ? "ml-4" : ""} relative flex items-center pl-5 border-b border-dashed border-[#eee] justify-between ${notFullWidth ? "w-1/2" : "w-full"}`}
-      key={key}>
+      className={`${sub ? "ml-4 " : ""}relative flex items-center pl-5 border-b border-dashed border-[#eee] justify-between ${notFullWidth ? "w-1/2" : "w-full"}`}>
       <MdKeyboardArrowRight className="absolute left-0 text-gray-400" />
       <h2 className="m-0 p-0 inline-flex w-full">
         <a

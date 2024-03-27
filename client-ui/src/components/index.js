@@ -16,3 +16,5 @@ export { default as ButtonPrimary } from "./ButtonPrimary";
 export { default as Rating } from "./Rating";
 export { default as TestimonialItem } from "./TestimonialItem";
 export { default as PaymentMethodItem } from "./PaymentMethodItem";
+export { default as PaymentMethodUserItem } from "./PaymentMethodUserItem";
+export { default as Table } from "./Table";

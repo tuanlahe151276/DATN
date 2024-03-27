@@ -18,6 +18,7 @@ module.exports = {
         tabShadow: "6px 0px 20px 0 #0000008c",
         headerShadow: "1px 0px 20px #0000001f",
         stuck: "1px 1px 10px rgba(0,0,0,0.15)",
+        methodItem: "0px 0px 20px 0 rgba(0,0,0,0.3)",
       },
       backgroundPosition: {
         no: "0 0",

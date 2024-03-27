@@ -6,3 +6,7 @@ export const isActiveNavStyles =
   "inline-block mr-0 ml-[5px] text-[#333] bg-[#f1f1f1] py-[5px] px-[10px] rounded-md font-bold underline hover:bg-[#e7f0f7]";
 export const isNotActiveNavStyles =
   "inline-block mr-0 ml-[5px] text-[#333] bg-[#f1f1f1] py-[5px] px-[10px] rounded-md hover:bg-[#e7f0f7]";
+export const isUserActiveStyles =
+  "flex items-center gap-x-1 w-full py-2 rounded-lg justify-start leading-tight transition-all text-blue-600 font-semibold";
+export const isNotUserActiveStyles =
+  "flex items-center gap-x-1 w-full py-2 rounded-lg justify-start leading-tight transition-all hover:text-blue-400";

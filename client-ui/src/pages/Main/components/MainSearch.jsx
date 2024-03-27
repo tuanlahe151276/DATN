@@ -74,7 +74,7 @@ export default function MainSearch() {
     <div className="h-[60px] mb-[10px]">
       <section className="h-full">
         <section className="bg-[#febb02] p-[10px] mb-5 h-full rounded-lg">
-          <div className="flex items-center text-sm text-[#777]">
+          <div className="flex items-center text-sm text-[#777] h-full">
             <div
               className="bg-white border border-white rounded-[5px] inline-flex items-center w-full h-[35px] my-0 mx-[3px] p-0 relative cursor-pointer basis-1/5 max-w-[20%]"
               onClick={() => {

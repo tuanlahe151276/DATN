@@ -11,7 +11,7 @@ export default function ListLink({ items, notFullWidth = false }) {
             {item?.list?.map((lis, index) => (
               <ItemLink
                 item={lis}
-                key={lis?.title + index}
+                key={`${lis?.title}${index}`}
                 sub
                 notFullWidth={notFullWidth}
               />

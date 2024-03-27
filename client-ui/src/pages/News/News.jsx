@@ -16,7 +16,7 @@ export default function News() {
   return (
     <div className="w-full flex justify-between">
       {/* content */}
-      <div className="w-[850px] news">
+      <div className="w-[850px]">
         <section className="mb-5 p-5 bg-white border border-[#dedede] rounded-lg">
           <ul className="w-full">
             {listNews?.map((item, index) => (
